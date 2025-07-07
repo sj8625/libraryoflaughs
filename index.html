@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library of Laughs</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to top, #ffd194, #70e1f5); /* warm sunrise */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .nav {
+      display: grid;
+      grid-template-columns: repeat(2, 150px);
+      gap: 1rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      background: #ffe5b4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Library of Laughs</h1>
+  <div class="nav">
+    <a href="jokes.html">Jokes</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="riddles.html">Riddles</a>
+    <a href="poems.html">Poems</a>
+  </div>
+</body>
+</html>
