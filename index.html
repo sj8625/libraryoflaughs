@@ -7,52 +7,124 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to top, #ffd194, #70e1f5); /* warm sunrise */
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+
+    .menu-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .menu-icon div {
+      width: 32px;
+      height: 4px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    .menu a {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
       color: #333;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .header {
       text-align: center;
+      margin-top: 120px;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .nav {
-      display: grid;
-      grid-template-columns: repeat(2, 150px);
-      gap: 1rem;
-    }
-
-    .nav a {
-      text-decoration: none;
-      background: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: background 0.3s;
+      font-size: 48px;
       color: #333;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
 
-    .nav a:hover {
-      background: #ffe5b4;
+    p {
+      font-size: 20px;
+      color: #555;
+      margin-top: -10px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .buttons button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #ffe29f;
     }
   </style>
 </head>
 <body>
-  <h1>Library of Laughs</h1>
-  <div class="nav">
-    <a href="jokes.html">Jokes</a>
-    <a href="quotes.html">Quotes</a>
-    <a href="riddles.html">Riddles</a>
-    <a href="poems.html">Poems</a>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
+
+  <!-- Dropdown Menu -->
+  <div class="menu" id="menu">
+    <a href="#about">About</a>
+    <a href="#acknowledgements">Acknowledgements</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Header Content -->
+  <div class="header">
+    <h1>Library of Laughs</h1>
+    <p>A hub for jokes, puns, and joyful nonsense</p>
+  </div>
+
+  <!-- Humor Categories -->
+  <div class="buttons">
+    <button>Jokes</button>
+    <button>Quotes</button>
+    <button>Riddles</button>
+    <button>Poems</button>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
