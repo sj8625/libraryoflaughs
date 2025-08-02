@@ -110,6 +110,7 @@
     <a href="#contact">Contact</a>
   </div>
 
+  <div id="homeSection">
   <!-- Header Content -->
   <div class="header">
     <h1>Library of Laughs</h1>
@@ -118,12 +119,14 @@
 
   <!-- Humor Categories -->
   <div class="buttons">
-    <button>Jokes</button>
+    <button onclick="showSection('jokes')">Jokes</button>
     <button>Quotes</button>
     <button>Riddles</button>
     <button>Poems</button>
   </div>
+</div>
 
+  
   <script>
     function toggleMenu() {
       const menu = document.getElementById("menu");
