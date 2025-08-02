@@ -1,9 +1,19 @@
 function toggleMenu() {
   const menu = document.getElementById("menu");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
-  // Hide all other sections first (in case you add more later)
+}
+
+// ✅ Add the full showSection function here
+function showSection(section) {
+  // Hide the home page
+  document.getElementById("homeSection").style.display = "none";
+
+  // Define which sections exist
   const sections = ["jokesSection"];
+  
+  // Show the matching section, hide others (for future expansion)
   sections.forEach(id => {
-    document.getElementById(id).style.display = (id === section + "Section") ? "block" : "none";
+    document.getElementById(id).style.display = id === section + "Section" ? "block" : "none";
   });
 }
+
