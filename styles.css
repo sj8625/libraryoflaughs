@@ -71,7 +71,7 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   width: 350px;
-  margin: 60px auto;
+  margin: 120px auto 0 auto;
 }
 
 .buttons button {
