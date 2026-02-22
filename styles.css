@@ -135,3 +135,21 @@ section {
   text-align: center;
 }
 
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdbb2d; /* matches your dark orange */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d89alf; /* slightly darker for contrast */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c6881b;
+}
+  
