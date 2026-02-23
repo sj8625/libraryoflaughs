@@ -72,3 +72,29 @@
   <p> What's a pirate's favorite part of the US Government?</p>
   <p>The FB-Aye</p>
 </section>
+
+<!-- all your sections go here -->
+<script>
+document.getElementById("jokeDropdown").addEventListener("change", function() {
+    const value = this.value;
+
+    // Hide all sections
+    document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+
+    if (value === "pirate") {
+        document.getElementById("pirateJokesSection").style.display = "block";
+    }
+
+    if (value === "animal") {
+        document.getElementById("animalJokesSection").style.display = "block";
+    }
+
+    if (value === "default") {
+        document.getElementById("homeSection").style.display = "block";
+    }
+});
+</script>
+
+</body>
+</html>
+                                               
