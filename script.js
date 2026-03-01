@@ -8,12 +8,16 @@ function showSection(section) {
   // Hide the home page
   document.getElementById("homeSection").style.display = "none";
 
-  // Define which sections exist
-  const sections = ["jokesSection"];
-  
-  // Show the matching section, hide others (for future expansion)
+  //Add all sections you want to toggle
+  const sections = [
+    "jokesSection",
+    "pirateJokesSection",
+    "animalJokesSection",
+  ];
+
+  //Show the matching section, hide others
   sections.forEach(id => {
-    document.getElementById(id).style.display = id === section + "Section" ? "block" : "none";
+    document.getElementById(id).style.display = 
+      id == section + "Section" ? "block" : "none";
   });
 }
-
