@@ -8,6 +8,42 @@ function showSection(section) {
   // Hide the home page
   document.getElementById("homeSection").style.display = "none";
 
+  const sections = [
+    "jokesSection"
+  ];
+
+  sections.forEach(id => {
+    document.getElementById(id).style.display = 
+      id == section + "Section" ? "block" : "none";
+  });
+}
+
+/* ⭐⭐ PASTE THIS DIRECTLY BELOW ⭐⭐ */
+document.getElementById("jokeDropdown").addEventListener("change", function() {
+  const value = this.value;
+  const display = document.getElementById("jokeDisplay");
+
+  if (value === "pirate") {
+    display.innerHTML = `
+      <h2>Pirate Jokes</h2>
+      <p>What do you call a pirate on drugs? Crack Sparrow.</p>
+      <p>What's a pirate's favorite part of the US Government? The FB-Aye.</p>
+      <p>What's a pirate's favorite letter? You'd think it's R, but it be the C.</p>
+    `;
+  }
+
+  else if (value === "animal") {
+    display.innerHTML = `
+      <h2>Animal Jokes</h2>
+      <p>Why did the cow cross the road? To get to the udder side.</p>
+    `;
+  }
+
+   else {
+    display.innerHTML = "";
+  }
+});
+
   //Add all sections you want to toggle
   const sections = [
     "jokesSection",
