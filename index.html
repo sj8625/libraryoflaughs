@@ -47,17 +47,20 @@
 
   <!-- Jokes Subpage -->
 <div id="jokesSection" style="display:none;">
-  <input type="text" id="searchBar" placeholder="Search jokes..." style="display:none;" />
   
-  <select id="jokeDropdown">
-    <option value="default">Select a category</option>
-    <option value="pirate">Pirate Jokes</option>
-    <option value="animal">Animal Jokes</option>
-  </select>
-
-   <div class="scroll-hint">
-     Scroll down to see the joke categories 👇
-   </div>
+  <div class="jokes-container">
+    <input type="text" id="searchBar" placeholder="Search jokes..." style="display:none;" />
+    
+    <select id="jokeDropdown">
+      <option value="default">Select a category</option>
+      <option value="pirate">Pirate Jokes</option>
+      <option value="animal">Animal Jokes</option>
+    </select>
+    
+    <div class="scroll-hint">
+      Scroll down to see the joke categories 👇
+    </div>
+  </div>
   
   <div id="jokeDisplay"></div>
 </div>
