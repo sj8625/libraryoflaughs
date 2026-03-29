@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Library of Laughs</title>
-
+  <!-- Link styles and scripts -->
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
+</head>
+  <style>
+  </style>
 </head>
 <body>
 
@@ -25,38 +28,76 @@
   </div>
 
   <div id="homeSection">
-    <!-- Header Content -->
-    <div class="header">
-      <h1>Library of Laughs</h1>
-      <p>A hub for jokes, puns, and joyful nonsense</p>
-    </div>
-
-    <!-- Humor Categories -->
-    <div class="buttons">
-      <button onclick="showSection('jokes')">Jokes</button>
-      <button>Quotes</button>
-      <button>Riddles</button>
-      <button>Poems</button>
-    </div>
+  <!-- Header Content -->
+  <div class="header">
+    <h1>Library of Laughs</h1>
+    <p>A hub for jokes, puns, and joyful nonsense</p>
   </div>
+
+  <!-- Humor Categories -->
+  <div class="buttons">
+    <button onclick="showSection('jokes')">Jokes</button>
+    <button>Quotes</button>
+    <button>Riddles</button>
+    <button>Poems</button>
+  </div>
+</div>
 
   <!-- Jokes Subpage -->
-  <div id="jokesSection" style="display:none;">
-    <input
-      type="text"
-      id="searchBar"
-      placeholder="Search jokes..."
-      style="display:none;"
-    />
+<div id="jokesSection" style="display:none;">
+  <input type="text" id="searchBar" placeholder="Search jokes..." style="display:none;" />
+  <select id="jokeDropdown">
+    <option value="default">Select a category</option>
+    <option value="pirate">Pirate Jokes</option>
+    <option value="animal">Animal Jokes</option>
+  </select>
+  <div id="jokeDisplay"></div>
+</div>
+  
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
 
-    <select id="jokeDropdown">
-      <option value="default">Select a category</option>
-      <option value="pirate">Pirate Jokes</option>
-      <option value="animal">Animal Jokes</option>
-    </select>
+<section id="pirateJokesSection" style="display:none;">
+  <h2>Pirate Jokes</h2>
 
-    <div id="jokeDisplay"></div>
-  </div>
+  <p> What do you call a pirate on drugs?</p>
+  <p> Crack Sparrow</p>
+
+  <p> What's a pirate's favorite part of the US Government?</p>
+  <p>The FB-Aye</p>
+
+  <p>What's a pirate's favorite letter?</p>
+  <p>You'd think it's R, but it be the C.</p>  
+</section>
+
+<!-- all your sections go here -->
+<script>
+document.getElementById("jokeDropdown").addEventListener("change", function() {
+    const value = this.value;
+
+    // Hide all sections
+    document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+
+    if (value === "pirate") {
+        document.getElementById("pirateJokesSection").style.display = "block";
+    }
+
+    if (value === "animal") {
+        document.getElementById("animalJokesSection").style.display = "block";
+    }
+
+    if (value === "default") {
+        document.getElementById("homeSection").style.display = "block";
+    }
+});
+</script>
 
 </body>
 </html>
+
