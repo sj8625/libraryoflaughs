@@ -8,13 +8,13 @@ function showSection(section) {
   // Hide the home page
   document.getElementById("homeSection").style.display = "none";
 
-  const sections = [
-    "jokesSection"
-  ];
+  // Only one section now
+  const sections = ["jokesSection"];
 
+  // Show jokesSection when section === "jokes"
   sections.forEach(id => {
-    document.getElementById(id).style.display = 
-      id == section + "Section" ? "block" : "none";
+    document.getElementById(id).style.display =
+      id === section + "Section" ? "block" : "none";
   });
 }
 
