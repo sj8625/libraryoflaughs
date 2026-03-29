@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Library of Laughs</title>
+  
   <!-- Link styles and scripts -->
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
@@ -28,6 +29,7 @@
   </div>
 
   <div id="homeSection">
+  
   <!-- Header Content -->
   <div class="header">
     <h1>Library of Laughs</h1>
@@ -46,11 +48,17 @@
   <!-- Jokes Subpage -->
 <div id="jokesSection" style="display:none;">
   <input type="text" id="searchBar" placeholder="Search jokes..." style="display:none;" />
+  
   <select id="jokeDropdown">
     <option value="default">Select a category</option>
     <option value="pirate">Pirate Jokes</option>
     <option value="animal">Animal Jokes</option>
   </select>
+
+   <div class="scroll-hint">
+     Scroll down to see the joke categories 👇
+   </div>
+  
   <div id="jokeDisplay"></div>
 </div>
   
@@ -65,10 +73,6 @@
 
 <section id="pirateJokesSection" style="display:none;">
   <h2>Pirate Jokes</h2>
-  
-  <div class="scroll-hint">
-    Scroll down to find pirate jokes 👇
-  </div>
 
   <p> What do you call a pirate on drugs?</p>
   <p> Crack Sparrow</p>
