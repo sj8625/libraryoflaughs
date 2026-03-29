@@ -3,7 +3,6 @@ function toggleMenu() {
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-// ✅ Add the full showSection function here
 function showSection(section) {
   // Hide the home page
   document.getElementById("homeSection").style.display = "none";
