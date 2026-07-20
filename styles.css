@@ -101,6 +101,8 @@ section {
 /* Show the home section by default */
 #homeSection {
   display: block;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #FFD9C0, #FFB899, FF9F80);
 }
 
 /* Optional: style each section for consistency */
