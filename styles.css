@@ -157,8 +157,9 @@ html, body {
   height: 100%; 
 }
 
-#pirateJokesSection {
-  display: none;
+#pirateJokesSection p {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .jokes-container {
