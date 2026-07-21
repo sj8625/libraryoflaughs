@@ -67,6 +67,15 @@ p {
   margin-bottom: 50px;
 }
 
+/* Joke spacing fixes */
+.joke {
+  margin-bottom: 24px; /* space between jokes */
+}
+
+.joke p {
+  margin: 4px 0; /* tight spacing inside each joke */
+}
+
 /* Humor category buttons in grid layout */
 .buttons {
   display: flex;
