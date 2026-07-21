@@ -158,8 +158,8 @@ html, body {
 }
 
 #pirateJokesSection p {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
 }
 
 .jokes-container {
