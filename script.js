@@ -21,3 +21,24 @@ function showSection(section) {
       id == section + "Section" ? "block" : "none";
   });
 }
+
+function showHome() {
+  // Hide all <section> elements
+  document.querySelectorAll("section").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  // Hide jokesSection too
+  document.getElementById("jokesSection").style.display = "none";
+  
+  // Show the home page
+  document.getElementById("homeSection").style.display = "block";
+  
+  // Reset dropdown
+  const dropdown = document.getElementById("jokeDropdown");
+  if (dropdown) dropdown.value = "default";
+
+  // Close the menu after clicking Home
+  const menu = document.getElementById("menu");
+  if (menu) menu.style.display = "none";
+}
