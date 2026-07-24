@@ -51,7 +51,7 @@ body {
 /* Header content */
 .header {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 0px;
 }
 
 h1 {
@@ -80,7 +80,7 @@ p {
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 140px;
+  margin-top: 20px;
 }
 
 .buttons button {
@@ -105,7 +105,10 @@ section {
 
 /* Show the home section by default */
 #homeSection {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   background: linear-gradient(to bottom, #FFD9C0, #FFB899, FF9F80);
 }
