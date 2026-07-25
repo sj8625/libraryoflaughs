@@ -32,7 +32,7 @@ function showHome() {
   document.getElementById("jokesSection").style.display = "none";
   
   // Show the home page
-  document.getElementById("homeSection").style.display = "block";
+  document.getElementById("homeSection").style.display = "flex";
   
   // Reset dropdown
   const dropdown = document.getElementById("jokeDropdown");
